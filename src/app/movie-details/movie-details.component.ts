@@ -20,6 +20,8 @@ export class MovieDetailsComponent implements OnInit {
   metascore: number = 0;
   color: string = '';
   duration: string = '';
+  loading: boolean = true;
+  
   constructor(
     private route: ActivatedRoute,
     private location: Location,
@@ -43,7 +45,7 @@ export class MovieDetailsComponent implements OnInit {
       } else {
         this.color = 'green'
       }
-      console.log(data);
+      this.loading = false;
       
     })
   }

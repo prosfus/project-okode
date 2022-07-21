@@ -1,7 +1,7 @@
 <div>
     
     <mat-form-field class="title-input" appearance="fill">
-        <mat-label>Movie title</mat-label>
+        <mat-label>Search a movie by title</mat-label>
         <input matInput type="text" name="titleValue" #titleValue>
         <button class="search-button" *ngIf="titleValue.value.length" matSuffix mat-icon-button (click)="handleSearch(titleValue.value)">
             <mat-icon>search</mat-icon>
