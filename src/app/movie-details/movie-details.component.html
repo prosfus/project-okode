@@ -1,0 +1,42 @@
+<div class="flex-row">
+    <img src="{{poster}}" alt="movie poster">
+    <mat-card class="card">
+        <mat-card-title-group>
+            <mat-card-title>{{title}}</mat-card-title>
+            <mat-card-subtitle>{{date}}</mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
+            <p>
+                <strong>Director(s): </strong>
+                {{director}}
+            </p>
+            <p>
+                <strong>Language: </strong>
+                {{idioma}}
+            </p>
+            <p>
+                <strong>Genre(s): </strong>
+                {{genre}}
+            </p>
+            <p>
+                <strong>Plot: </strong>
+                {{plot}}
+            </p>
+            <p>
+                <strong>Duration: </strong>
+                {{duration}}
+            </p>
+            <div [ngClass]="{
+                'red score':metascore < 50,
+                'green score':metascore >=75,
+                'yellow score':metascore >= 50 && metascore < 75
+              }">
+                {{metascore}}
+            </div>
+        </mat-card-content>
+        
+    </mat-card>
+    
+</div>
+
+

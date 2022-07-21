@@ -1,0 +1,25 @@
+<div>
+    
+    <mat-form-field class="title-input" appearance="fill">
+        <mat-label>Movie title</mat-label>
+        <input matInput type="text" name="titleValue" #titleValue>
+        <button class="search-button" *ngIf="titleValue.value.length" matSuffix mat-icon-button (click)="handleSearch(titleValue.value)">
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-form-field>
+    <div>
+        <div class="movie-item" *ngFor="let movie of data">
+            <a routerLink="/movie/{{movie.imdbID}}">{{movie.Title}}</a>
+        </div>
+    </div>
+    
+    
+    <div class="buttons" *ngIf="pages">
+        <button mat-raised-button *ngIf="page > 1" (click)="decPage()" color="primary">Previous</button>
+        <div>{{page}}/{{totalPages}}</div>
+        <button mat-raised-button *ngIf="page < totalPages" (click)="incPage()" color="primary">Next</button>
+    </div>
+    <div *ngIf="noresults" class="noresults">
+        No results
+    </div>
+</div>
