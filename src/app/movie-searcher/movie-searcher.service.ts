@@ -13,11 +13,11 @@ export class SearcherService {
   }
  
   getMovies(title: string, page: number): Observable<any> {
-    return this.http.get('http://www.omdbapi.com/?apikey=6e0a257&s='+title+'&type=movie&page='+page)
+    return this.http.get('https://www.omdbapi.com/?apikey=6e0a257&s='+title+'&type=movie&page='+page)
   }
 
   getMovie(id: string): Observable<any> {
-    return this.http.get('http://www.omdbapi.com/?apikey=6e0a257&i='+id)
+    return this.http.get('https://www.omdbapi.com/?apikey=6e0a257&i='+id)
   }
  
 }

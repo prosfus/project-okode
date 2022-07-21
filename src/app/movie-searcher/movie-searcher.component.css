@@ -56,3 +56,8 @@ a,
     font-size: 15px;
     color: #d64949;
   }
+
+  mat-label {
+    font-size: 15px;
+    font-weight: bold;
+  }
