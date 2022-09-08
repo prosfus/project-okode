@@ -1,37 +1,37 @@
 <div *ngIf="!loading" class="flex-row">
-    <img src="{{poster}}" alt="movie poster">
+    <img src="{{details.poster}}" alt="movie poster">
     <mat-card class="card">
         <mat-card-title-group>
-            <mat-card-title>{{title}}</mat-card-title>
-            <mat-card-subtitle>{{date}}</mat-card-subtitle>
+            <mat-card-title>{{details.title}}</mat-card-title>
+            <mat-card-subtitle>{{details.date}}</mat-card-subtitle>
         </mat-card-title-group>
         <mat-card-content>
             <p>
                 <strong>Director(s): </strong>
-                {{director}}
+                {{details.director}}
             </p>
             <p>
                 <strong>Language: </strong>
-                {{idioma}}
+                {{details.idioma}}
             </p>
             <p>
                 <strong>Genre(s): </strong>
-                {{genre}}
+                {{details.genre}}
             </p>
             <p>
                 <strong>Plot: </strong>
-                {{plot}}
+                {{details.plot}}
             </p>
             <p>
                 <strong>Duration: </strong>
-                {{duration}}
+                {{details.duration}}
             </p>
             <div [ngClass]="{
-                'red score':metascore < 50,
-                'green score':metascore >=75,
-                'yellow score':metascore >= 50 && metascore < 75
+                'red score':details.metascore < 50,
+                'green score':details.metascore >=75,
+                'yellow score':details.metascore >= 50 && details.metascore < 75
               }">
-                {{metascore}}
+                {{details.metascore}}
             </div>
         </mat-card-content>
     </mat-card>

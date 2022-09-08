@@ -14,12 +14,12 @@
     </div>
     
     
-    <div class="buttons" *ngIf="pages">
-        <button mat-raised-button *ngIf="page > 1" (click)="decPage()" color="primary">Previous</button>
-        <div>{{page}}/{{totalPages}}</div>
-        <button mat-raised-button *ngIf="page < totalPages" (click)="incPage()" color="primary">Next</button>
+    <div class="buttons" *ngIf="pageInfo.pages">
+        <button mat-raised-button *ngIf="pageInfo.page > 1" (click)="decPage()" color="primary">Previous</button>
+        <div>{{pageInfo.page}}/{{pageInfo.totalPages}}</div>
+        <button mat-raised-button *ngIf="pageInfo.page < pageInfo.totalPages" (click)="incPage()" color="primary">Next</button>
     </div>
-    <div *ngIf="noresults" class="noresults">
+    <div *ngIf="pageInfo.noresults" class="noresults">
         No results
     </div>
 </div>
